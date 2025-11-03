@@ -1,5 +1,9 @@
 
 # OPENING--AND-CLOSING
+
+### DEVELOPED BY: PRAVESH N
+### REGISTER NO: 212223230154
+
 ## Aim
 To implement Opening and Closing using Python and OpenCV.
 
@@ -24,11 +28,13 @@ Use Closing Operation.
 
  
 ## Program:
-### DEVELOPED BY: PRAVESH N
-### REGISTER NO: 212223230154
 
 # Import the necessary packages
-```
+```py
+# DEVELOPED BY : PRAVESH N
+# REG NO : 212223230154
+# EXPT NO : 10
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,7 +42,7 @@ import matplotlib.pyplot as plt
 
 
 # Create the Text using cv2.putText
-```
+```py
 img = np.zeros((100, 550), dtype = 'uint8')
 font = cv2.FONT_ITALIC
 cv2.putText(img, 'JANARTHANAN K', (5,70), font, 2, (255), 5, cv2.LINE_AA)
@@ -47,18 +53,18 @@ plt.axis("off")
 
 
 # Create the structuring element
-```
+```py
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (11,11))
 ```
 # Use Opening operation
-```
+```py
 image_open = cv2.morphologyEx(n_img, cv2.MORPH_OPEN, kernel)
 plt.imshow(image_open)
 plt.axis("off")
 
 ```
 # Use Closing Operation
-```
+```py
 image_close = cv2.morphologyEx(n_img, cv2.MORPH_CLOSE, kernel)
 plt.imshow(image_close)
 plt.axis("off")
